@@ -4,22 +4,18 @@
 
 int main()
 {
-        int i, j=65, flag=0;
+	int i, j, blank=71;
 
-	//for(i=0; i<13; i++)
-	while(j != 64)
-	{
-		printf("%c ", j);
-		
-		if(j < 71 && flag == 0) 
-			j++;
-		else
+		for(i=0; i<7; i++)
 		{
-			flag =1;
-			j--;
-		}
+			for(j=65; j<72; j++)
+				(j > blank) ? printf("  "):printf("%c ", j);
+			for(j=70; j>=65; j--)
+				(j > blank) ? printf("  "):printf("%c ", j);
+		printf("\n");
+
+		blank--;
 	}
-	printf("\n");
 
 	return 0;
 }
