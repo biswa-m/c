@@ -10,7 +10,8 @@ int main()
 	scanf("%d", &n);
 	
 	/* Week consist of 7 days. a non leap year has 1 extra day. A leap year has 2 extra days */
-	lyCount = (n-1)/4; //leap year count before 1st january of the input year. leap year comes on feb 29th 
+	n = n-1; //leap year count before 1st january of the input year. leap year comes on feb 29th  
+	lyCount = n/4 - n/100 + n/400;
 	day = (n + lyCount) % 7; // total extra days 
 
 	//	printf("%d", day);
