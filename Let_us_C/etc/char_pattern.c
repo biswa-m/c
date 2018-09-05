@@ -1,19 +1,27 @@
-// print  A B C D E F G F E D C B A
+// print character Pattern 
 
 #include <stdio.h>
 
 int main()
 {
-	int i, j, blank=71;
+	int i, j, blank='G', flag;
 
-		for(i=0; i<7; i++)
+	for(i=0; i<7; i++)
+	{
+		j = 'A';
+		flag = 0;
+
+		while(j>='A')
 		{
-			for(j=65; j<72; j++)
-				(j > blank) ? printf("  "):printf("%c ", j);
-			for(j=70; j>=65; j--)
-				(j > blank) ? printf("  "):printf("%c ", j);
-		printf("\n");
+			(j > blank) ? printf("  "):printf("%c ", j);
 
+			if(j < 'G' && flag == 0) 	
+				j++;	
+			else	
+				j--, flag = 1;
+		}
+		
+		printf("\n");
 		blank--;
 	}
 
