@@ -24,4 +24,6 @@ int main()
     	printf ("number of screens:    %d\n", ScreenCount (dpy));	
 	printf ("display width:    %d\n", DisplayWidth (dpy, 0));
 	printf ("display height:     %d\n", DisplayHeight (dpy, 0));
+
+	return 0;
 }

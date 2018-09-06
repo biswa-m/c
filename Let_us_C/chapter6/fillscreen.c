@@ -10,7 +10,8 @@ int main()
         char *displayname = NULL;            /* server to contact */
 
         dpy = XOpenDisplay (displayname);
-        if (!dpy) {
+        if (!dpy) 
+	{
                 fprintf (stderr, "unable to open display \"%s\".\n",
                 XDisplayName (displayname));
                 exit (1);
@@ -21,11 +22,12 @@ int main()
 	width = DisplayWidth(dpy, 0);
 	height = DisplayHeight(dpy, 0);	
 	
-	for(i = 1; i <= height/21; i++) 	
+	for(i = 1; i <= height/21; i++)	
 	{
 		for(j = 0; j <= width/30; j++)
 			printf("%c%c ", ':',')');
 		printf("\n");
 	}
+
 	return 0;
 }
