@@ -4,22 +4,21 @@
 
 int main()
 {
-	int num, j, count = 0, upto = 300;
+	int num, j, upto = 300;
 
-	for(num =2 ; num <= upto; num++)
+	for(num =2; num <= upto; num++)
 	{
-		for(j = 1, count = 0; (j <= num && count <= 2); j++)
+		j = 2;
+		while(1)
 		{
-			if (num % j == 0)
+			if ((num % j == 0)  && (j != num))
+				break;
+			else if(j ==  num)
 			{
-				count++;
-				if (count == 2 && j == num)
-				{
-					printf(" %d", num);
-					break;
-				}
-
+				printf("%d ", num);
+				break;
 			}
+			j++;
 		}
 	}
 	printf("\n");
