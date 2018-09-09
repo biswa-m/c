@@ -45,4 +45,5 @@ int main()
 		printf("%.2f is bigger\n", big);
 	}
 
+	return 0;
 }
