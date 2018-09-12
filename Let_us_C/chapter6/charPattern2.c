@@ -18,7 +18,7 @@ int main()
 		{
 			if (j <= row-i) 	//Starting blank space
 			{
-				printf(" ");
+				printf("%3c", ' ');
 				continue;
 			}
 
@@ -32,17 +32,17 @@ int main()
 
 				//first and last positions are always 1
 				if ((j == row-i+1) || (j == row+i-1))
-					printf("1");
+					printf("%3d", 1);
 			
 				//odd positions from stating char are blank
 				else if ((j - (row-i+1)) % 2)
 				{
-					printf(" ");
+					printf("%3c", ' ');
 					x += diff;
 				}
 				else 
 				{
-					printf("%d", x);
+					printf("%3d", x);
 					x += diff;
 				}
 			}
