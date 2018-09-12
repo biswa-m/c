@@ -1,0 +1,3 @@
+This is a sample file for different file operations.
+"This" is a character string. 7615 is a integer.
+And this is last line.
