@@ -23,5 +23,6 @@ int main()
 	}
 	printf("The total character size of the file is %d\n", count);
 
+	fclose(fp);
 	return 0;
 }
