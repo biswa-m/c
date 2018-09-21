@@ -1,8 +1,10 @@
-# pb_sitemap.c
+# Network releted codes
+These codes are just for practise purpose.
 
+## 1. pb_sitemap.c
 To crawl recursively over https://priceboard.in/sitemap.xml and
-    - Find all "www.priceboard.in" and remove "www." from those
-    - Find and limit the product names to 255 chararcters 
+- Find all "www.priceboard.in" and remove "www." from those
+- Find and limit the product names to 255 chararcters 
  
 ### Run the code
 To compile and run the code...
