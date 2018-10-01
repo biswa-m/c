@@ -58,3 +58,34 @@
 	0
 	0
 
+## 7.c
+	3 2 15
+
+## 8.c
+	7 9 11 13 15
+
+## 9.c
+	2 4 6 8 10
+	16
+
+## 10.c
+	1510730864 1510730864 -248449216 1
+	
+Here *n and &n[0] is displaying address of the first element of the array
+n[3][3] is printing garbage value.
+n[2][2] is printing 3rd value of 3rd row
+
+## 11.c
+	2 4 3 6 8 5 3 5 1 
+
+## 12.c
+	 2 2
+	 4 4
+	 3 3
+	 6 6
+	 8 8
+	 5 5
+	 3 3
+	 5 5
+	 1 1
+	n=475612144, *n=475612144, **n=2, *(n+1)=475612156
