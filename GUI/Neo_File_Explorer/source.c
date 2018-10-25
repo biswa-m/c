@@ -169,6 +169,12 @@ static void show_list(struct _data *data)
 	g_signal_connect(tree, "row-activated", 
 			G_CALLBACK(on_row_activated_cb), data);
 
+	// Adjusting horizontal scroll bar
+	gtk_adjustment_set_value(gtk_scrollable_get_hadjustment(
+		data->main_view_port),
+		gtk_adjustment_get_upper(
+		gtk_scrollable_get_hadjustment(data->main_view_port)));
+				
 	gtk_widget_show_all(tree_scroll);
 }
 
@@ -248,6 +254,8 @@ static void activate_cb(GtkApplication *app, char *argv)
 	GtkWidget *file_view_port;
 	file_view_port = GTK_WIDGET(gtk_builder_get_object(builder, 
 				"file_view_port"));
+	gtk_adjustment_set_upper(
+			gtk_scrollable_get_hadjustment(file_view_port), 1.);
 
 	GtkWidget *hbox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 2);
 	gtk_container_add(GTK_CONTAINER(file_view_port), hbox);
@@ -259,6 +267,7 @@ static void activate_cb(GtkApplication *app, char *argv)
 	struct _data *data = malloc(sizeof(struct _data));
 	memset(data, 0, sizeof(struct _data));
 	
+	data->main_view_port = file_view_port;
 	data->container = hbox;
 	data->add_bar = add_bar;
 	data->preview_box = preview_box;

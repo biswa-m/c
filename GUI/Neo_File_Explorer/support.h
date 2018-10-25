@@ -46,6 +46,7 @@ struct _pdf_previewer {
 };
 
 struct _data {
+	GtkWidget *main_view_port;
 	GtkWidget *container;
 	GtkWidget *add_bar;
 	GtkWidget *drawing_area;
