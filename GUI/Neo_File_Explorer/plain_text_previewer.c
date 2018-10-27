@@ -1,6 +1,7 @@
 void initialize_text_preview(struct _data *data) {
 	GtkTextBuffer *text_buffer = gtk_text_buffer_new(NULL);
 	GtkWidget *text_view = gtk_text_view_new_with_buffer(text_buffer);
+	gtk_text_view_set_editable(GTK_TEXT_VIEW(text_view), FALSE);
 
 	GtkWidget *scroll_text = gtk_scrolled_window_new(NULL, NULL);
 	gtk_scrolled_window_set_propagate_natural_height (
